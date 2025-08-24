@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts & Responsive Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Flexbox -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Brian Group</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Modern CSS Layout Techniques</h1>
+            <p>Master Flexbox and Grid to create responsive, beautiful web layouts that work on any device.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Main Content with Grid -->
+    <main class="main-content container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/400x200" alt="Flexbox Example">
+                <div class="card-content">
+                    <h3>Flexbox Layout</h3>
+                    <p>Create flexible and efficient one-dimensional layouts that adapt to different screen sizes.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/400x200" alt="Grid Example">
+                <div class="card-content">
+                    <h3>CSS Grid</h3>
+                    <p>Design complex two-dimensional layouts with precise control over rows and columns.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/400x200" alt="Responsive Design">
+                <div class="card-content">
+                    <h3>Responsive Design</h3>
+                    <p>Ensure your website looks great on all devices with media queries and flexible units.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials with Flexbox -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"The Flexbox and Grid course completely transformed how I approach web layout. Highly recommended!"</p>
+                    <p class="testimonial-author">- Sarah Auma</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"I finally understand how to create truly responsive designs. The examples were practical and easy to follow."</p>
+                    <p class="testimonial-author">- Michael Mutinda</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The perfect balance of theory and practice. My CSS skills improved dramatically after this course."</p>
+                    <p class="testimonial-author">- Jessica Cheplimo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Master CSS Layouts?</h2>
+            <a href="#" class="btn">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Footer with Grid -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Brian Group</h3>
+                    <p>Creating responsive, beautiful web layouts with modern CSS techniques.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">CSS Documentation</a></li>
+                        <li><a href="#">Flexbox Guide</a></li>
+                        <li><a href="#">Grid Guide</a></li>
+                        <li><a href="#">Responsive Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">💻</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Brian Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
